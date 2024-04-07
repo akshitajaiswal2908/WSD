@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Sense Disambiguation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-fv7T/u6IlQRAmYv5GjWvFNpdtrCfyWtWgjSKT/iuxuxvLUjVHsAKhMDxDsrkJZx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Word Sense Disambiguation</h1>
+      <div class="chat">
+        <div id="chat-area"></div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+      <div id="output"></div>
+      <!-- New div for output -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

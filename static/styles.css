@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(IMG.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 600px; /* Adjust width as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Adding some transparency to the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally within the container */
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px; /* Add some space after the title */
+  }
+  
+  .chat {
+    flex: 1; /* Allow chat area to fill remaining space */
+    background-color: rgba(255, 255, 255, 0.8); /* Adding some transparency to the chat area */
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll; /* Enable scrolling for long chat conversations */
+    display: flex;
+    flex-direction: column-reverse; /* Display newest messages at the bottom */
+  }
+  
+  .message { /* Base style for both user and server messages */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .user-message {
+    background-color: #e6ffe6; /* Light green for user messages (WhatsApp-like) */
+    position: relative; /* Needed for right alignment */
+  }
+  
+  .user-message::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 0;
+    border-color: transparent
+  }
+  
+  .chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-input input[type="text"] {
+    width: 70%; /* Adjust width as needed */
+  }
+  
+  .chat-input button {
+    width: 25%; /* Adjust width as needed */
+    background-color: #007bff; /* Blue color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
